@@ -1,3 +1,4 @@
-# rez-openjpeg
+rez-openjpeg
+===
 
-Rez build configuration for pybind11.
+Rez build configuration for OpenJPEG.
