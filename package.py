@@ -41,6 +41,9 @@ def commands():
     env.PATH.prepend("{root}/bin")
     env.LD_LIBRARY_PATH.prepend("{root}/lib")
     env.PKG_CONFIG_PATH.prepend("{root}/lib/pkgconfig")
+    # We know that the version numbers are separated by a ".", so we should safely be able to get the
+    # number we want through a split.
+    env.CMAKE_MODULE_PATH.prepend("{root}/lib/openjpeg-" + str(version).split(".")[0] + "." + str(version).split(".")[1])
 
     # Helper environment variables.
     env.OPENJPEG_BINARY_PATH.set("{root}/bin")
